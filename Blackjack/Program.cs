@@ -5,7 +5,7 @@
 
 
         static void Main(string[] args)
-        {
+        { 
             Cards cards = new Cards();
             Console.WriteLine($"{cards.Deck}");
             Console.WriteLine("");

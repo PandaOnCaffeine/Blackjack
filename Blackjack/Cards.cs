@@ -7,17 +7,22 @@ using System.Threading.Tasks;
 namespace Blackjack
 {
     public struct Cards
-    {
-        //public CardColors colors;
-        //public CardValues values;
-        private int colors;
-        private int value;
-
-
-        public Cards(int color, int value)
+    { 
+        //public CardColors color;
+        //public CardValues value;
+        private int colors = 0;
+        private int values = 0;
+        private int[,] deck = new int[4,13];
+        public int[,] Deck { get { return deck; } }
+        public Cards()
         {
-            this.colors = color;
-            this.value = value;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 13; j++)
+                {
+                    deck[i,j] = j;
+                }
+            }
         }
     }
 }

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace Blackjack
 {
     public enum CardColors
-    {
-        heart,
-        spade,
-        club,
-        diamond
+    { 
+        heart = 1,
+        spade = 2,
+        club = 3,
+        diamond = 4
     }
 }
