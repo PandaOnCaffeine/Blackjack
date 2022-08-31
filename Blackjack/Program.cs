@@ -7,12 +7,8 @@
         static void Main(string[] args)
         {
             string yesNo;
-            bool gameDone = false;
             bool playerTurn = true;
-            int playerSum = 0;
-            int computerSum = 0;
 
-            List<Cards> computerCards = new List<Cards>();
 
             Deck deck = new Deck();
 
@@ -49,18 +45,21 @@
                     deck.showTablePlayersTurn();
                 } while (yesNo != "n");
 
-                deck.playerCards[0];
-                foreach (Cards c in deck.playerCards)
+                do
                 {
-                    Console.WriteLine(c);
-                }
-
-
+                    if (deck.ComputerSum < 15)
+                    {
+                        yesNo = "y";
+                        playerTurn = false;
+                        deck.PickUp(playerTurn);
+                    }
+                    else
+                    {
+                        yesNo = "n";
+                    }
+                    deck.showTable();
+                } while (yesNo != "n");
             }
-
-
-
-
         }
     }
 }

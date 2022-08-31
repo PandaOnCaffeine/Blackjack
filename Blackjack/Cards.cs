@@ -44,19 +44,7 @@ namespace Blackjack
             {
                 return CardSymbol + ":" + CardNumber;
             }
-
-
-
-
-
-
-
             return base.ToString();
         }
-
-
-
-
-
     }
 }
