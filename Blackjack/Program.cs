@@ -4,7 +4,7 @@
     {
 
 
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
             //Variables for deciding things
             string yesNo;

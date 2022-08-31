@@ -8,10 +8,12 @@ namespace Blackjack
 {
     public struct Cards
     {
+        //Creates 3 public variables
         public string CardSymbol { get; }
         public int CardRank { get; }
         public int CardNumber { get; }
 
+        //Konstruckter
         public Cards(string cardSymbol, int cardRank, int cardNumber)
         {
             this.CardSymbol = cardSymbol;
@@ -19,11 +21,14 @@ namespace Blackjack
             this.CardNumber = cardNumber;
         }
 
+        //ToString Override
         public override string ToString()
         {
             if (CardNumber > 10)
             { 
                 string cardWithPicture = "";
+                
+                //Switches the cardNumbers 11,12,13 with the name of thier picture
                 switch (CardNumber)
                 {
                     case 11:
@@ -38,10 +43,12 @@ namespace Blackjack
                     default:
                         break;
                 }
+                //returns the symbol with the name of the picture card
                 return CardSymbol + ":" + cardWithPicture;
             }
             else
             {
+                //Returns the symbol with the cards number
                 return CardSymbol + ":" + CardNumber;
             }
             return base.ToString();
