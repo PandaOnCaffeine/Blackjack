@@ -7,22 +7,56 @@ using System.Threading.Tasks;
 namespace Blackjack
 {
     public struct Cards
-    { 
-        //public CardColors color;
-        //public CardValues value;
-        private int colors = 0;
-        private int values = 0;
-        private int[,] deck = new int[4,13];
-        public int[,] Deck { get { return deck; } }
-        public Cards()
+    {
+        public string CardSymbol { get; }
+        public int CardRank { get; }
+        public int CardNumber { get; }
+
+        public Cards(string cardSymbol, int cardRank, int cardNumber)
         {
-            for (int i = 0; i < 4; i++)
-            {
-                for (int j = 0; j < 13; j++)
-                {
-                    deck[i,j] = j;
-                }
-            }
+            this.CardSymbol = cardSymbol;
+            this.CardRank = cardRank;
+            this.CardNumber = cardNumber;
         }
+
+        public override string ToString()
+        {
+            if (CardNumber > 10)
+            {
+                string cardWithPicture = "";
+                switch (CardNumber)
+                {
+                    case 11:
+                        cardWithPicture = "Knight";
+                        break;
+                    case 12:
+                        cardWithPicture = "Queen";
+                        break;
+                    case 13:
+                        cardWithPicture = "King";
+                        break;
+                    default:
+                        break;
+                }
+                return CardSymbol + ":" + cardWithPicture;
+            }
+            else
+            {
+                return CardSymbol + ":" + CardNumber;
+            }
+
+
+
+
+
+
+
+            return base.ToString();
+        }
+
+
+
+
+
     }
 }
