@@ -111,7 +111,7 @@ namespace Blackjack
 
         }
         public void showTablePlayersTurn()
-        {
+        { 
             Console.Clear();
             Console.WriteLine("Players cards: Sum: " + playerSum);
             foreach (Cards c in playerCards)
@@ -121,6 +121,21 @@ namespace Blackjack
             Console.WriteLine("");
             Console.WriteLine("Computers cards:");
             Console.WriteLine(computerCards[0]);
+        }
+        public void showTable()
+        {
+            Console.Clear();
+            Console.WriteLine("Players cards: Sum: " + playerSum);
+            foreach (Cards c in playerCards)
+            {
+                Console.WriteLine(c);
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Computers cards: Sum: " + computerSum);
+            foreach (Cards c in computerCards)
+            {
+                Console.WriteLine(c);
+            }
         }
     }
 }

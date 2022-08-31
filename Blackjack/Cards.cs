@@ -22,7 +22,7 @@ namespace Blackjack
         public override string ToString()
         {
             if (CardNumber > 10)
-            {
+            { 
                 string cardWithPicture = "";
                 switch (CardNumber)
                 {
